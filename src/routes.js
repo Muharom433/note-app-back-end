@@ -5,7 +5,7 @@ const routes = [
         method: 'GET',
         path: '/',
         handler: (request, h) => {
-            const response = h.response('Hello dunia');
+            const response = h.code(200);
             return response;
         },
     },
