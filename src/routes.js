@@ -6,7 +6,6 @@ const routes = [
         path: '/',
         handler: (request, h) => {
             const response = h.response('Hello dunia');
-            h.type('text/html');
             return response;
         },
     },
