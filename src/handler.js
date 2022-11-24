@@ -132,11 +132,21 @@ const homepage = (request, h) => {
     return response;
 };
 
+const deleteAll = (request, h) => {
+    notes.splice(0, (notes.length += 1));
+
+    return h.response({
+        status: 'semua data terhapus',
+        notes,
+    });
+};
+
 module.exports = {
     addNoteHandler,
     getAllNotesHandler,
     getNoteByIdHandler,
     editNoteByIdHandler,
     deleteNoteByIdHandler,
+    deleteAll,
     homepage,
 };
