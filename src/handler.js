@@ -123,10 +123,17 @@ const deleteNoteByIdHandler = (request, h) => {
     return response;
 };
 
+const homepage = (request, h) => {
+    const response = h.response('Hello World');
+    response.code(200);
+    return response;
+};
+
 module.exports = {
     addNoteHandler,
     getAllNotesHandler,
     getNoteByIdHandler,
     editNoteByIdHandler,
     deleteNoteByIdHandler,
+    homepage,
 };
