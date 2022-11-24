@@ -124,8 +124,10 @@ const deleteNoteByIdHandler = (request, h) => {
 };
 
 const homepage = (request, h) => {
-    const response = h.response('Hello World');
-    response.type('text/html');
+    const response = h.response({
+        nama: 'Muharom',
+        menyapa: 'Hallo Dunia ini homepages',
+    });
     response.code(200);
     return response;
 };
