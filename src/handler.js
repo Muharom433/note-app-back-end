@@ -125,6 +125,7 @@ const deleteNoteByIdHandler = (request, h) => {
 
 const homepage = (request, h) => {
     const response = h.response('Hello World');
+    response.type('text/html');
     response.code(200);
     return response;
 };
